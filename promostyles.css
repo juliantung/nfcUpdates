@@ -30,7 +30,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px; /* Increased max-width for zoom effect */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +47,7 @@ body {
 }
 
 .card {
-  height: 95px;
+  height: 120px; /* Increased height for zoom effect */
   width: 100%;
   background: var(--primary-colour);
   margin-top: 15px;
@@ -58,11 +58,12 @@ body {
   overflow: hidden;
   transition: 0.3s;
   border: 2px solid var(--secondary-colour);
+  position: relative;
 }
 
 h2 {
   padding-bottom: 20px;
-  font-size: 1.5rem;
+  font-size: 1.7rem; /* Increased font size for zoom effect */
 }
 
 .content-container {
@@ -71,14 +72,14 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px;
+  padding: 0 20px; /* Increased padding for zoom effect */
 }
 
 .game-image1,
 .game-image2,
 .game-image3 {
-  width: 70px;
-  height: 70px;
+  width: 90px; /* Increased image size for zoom effect */
+  height: 90px;
   background-position: center;
   background-size: cover;
   border-radius: 5px;
@@ -98,21 +99,25 @@ h2 {
 }
 
 .game-name {
-  font-size: 1.2rem;
+  font-size: 1.5rem; /* Increased font size for zoom effect */
   color: var(--secondary-colour);
   flex: 1;
   text-align: left;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .rating {
-  transition: 0.5s;
-  font-size: 1.5rem;
+  font-size: 2rem; /* Increased font size for zoom effect */
   text-align: right;
+  position: absolute;
+  right: 20px;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease;
 }
 
-.card:hover .rating {
-  transform: scale(1.1);
+.card:hover .rating,
+.card:focus .rating {
+  opacity: 1; /* Show when hovered or focused */
 }
 
 .list-container:hover .card {
@@ -135,18 +140,18 @@ h2 {
   }
 
   .card {
-    height: 110px;
+    height: 140px; /* Increased height for mobile */
   }
 
   h2 {
-    font-size: 1.7rem;
+    font-size: 1.9rem;
   }
 
   .game-name {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
   }
 
   .rating {
-    font-size: 1.7rem;
+    font-size: 2.2rem;
   }
 }
