@@ -7,6 +7,8 @@
   --input-bg-colour: rgba(255, 255, 255, 0.05);
   --input-border-focus-colour: rgb(99, 102, 241);
   --button-bg-colour: rgb(75, 77, 219);
+  --body-color: hsl(var(--second-hue), 100%, 99%);
+  --star-colour: hsl(38 90% 55%);
 }
 
 body {
@@ -17,6 +19,8 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
+  margin: 0;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 .form {
@@ -26,6 +30,7 @@ body {
   max-width: 450px;
   width: 100%;
   text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .title {
