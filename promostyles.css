@@ -16,7 +16,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 *,
@@ -30,11 +30,14 @@ body {
 
 .container {
   width: 100%;
-  max-width: 500px; /* Increased max-width for zoom effect */
+  max-width: 500px; /* Maximum width for larger screens */
   display: flex;
+  flex-direction: column; /* Align items vertically */
   justify-content: center;
   align-items: center;
-  padding: 50px 20px;
+  height: 100vh; /* Take full screen height */
+  padding: 0 20px; /* Adjust padding for better fit */
+  box-sizing: border-box;
 }
 
 .list-container {
@@ -47,7 +50,7 @@ body {
 }
 
 .card {
-  height: 120px; /* Increased height for zoom effect */
+  height: 100px; /* Adjusted height for better fit */
   width: 100%;
   background: var(--primary-colour);
   margin-top: 15px;
@@ -78,8 +81,8 @@ h2 {
 .game-image1,
 .game-image2,
 .game-image3 {
-  width: 90px; /* Increased image size for zoom effect */
-  height: 90px;
+  width: 70px; /* Adjusted size to fit screen better */
+  height: 70px;
   background-position: center;
   background-size: cover;
   border-radius: 5px;
@@ -140,7 +143,7 @@ h2 {
   }
 
   .card {
-    height: 140px; /* Increased height for mobile */
+    height: 110px; /* Adjusted height for mobile fit */
   }
 
   h2 {
