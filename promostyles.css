@@ -15,7 +15,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Disable scrollbars */
+  overflow: hidden; /* Disable scrolling */
 }
 
 body {
@@ -26,6 +26,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: hidden; /* Ensure no scrolling */
 }
 
 .container {
@@ -35,8 +36,7 @@ body {
   flex-direction: column; /* Align items vertically */
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Take full screen height */
-  padding: 0 20px;
+  height: 100vh; /* Full screen height */
   box-sizing: border-box;
 }
 
@@ -62,6 +62,7 @@ body {
   transition: 0.3s;
   border: 2px solid var(--secondary-colour);
   position: relative;
+  box-sizing: border-box; /* Include padding and border in height */
 }
 
 .content-container {
@@ -132,7 +133,7 @@ body {
 
 @media (max-width: 600px) {
   .container {
-    padding: 20px;
+    padding: 0;
     max-width: 100%;
   }
 
