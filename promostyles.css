@@ -3,29 +3,29 @@
 :root {
   --primary-colour: #0B111E;
   --secondary-colour: hsl(233 80% 70%);
+  --form-bg-colour: linear-gradient(96.5deg, rgba(39,103,187,1) 10.4%, rgba(16,72,144,1) 87.7%);
+  --input-bg-colour: rgba(255, 255, 255, 0.05);
+  --input-border-focus-colour: rgb(99, 102, 241);
+  --button-bg-colour: rgb(75, 77, 219);
   --body-color: hsl(var(--second-hue), 100%, 99%);
   --star-colour: hsl(38 90% 55%);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Disable scrollbars */
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--primary-colour);
   color: #fff;
-  height: 100vh;
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Prevent scrolling */
-}
-
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  transition: 0.3s;
+  text-align: center;
 }
 
 .container {
@@ -36,7 +36,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh; /* Take full screen height */
-  padding: 0 20px; /* Adjust padding for better fit */
+  padding: 0 20px;
   box-sizing: border-box;
 }
 
@@ -50,7 +50,7 @@ body {
 }
 
 .card {
-  height: 100px; /* Adjusted height for better fit */
+  height: 120px;
   width: 100%;
   background: var(--primary-colour);
   margin-top: 15px;
@@ -64,24 +64,19 @@ body {
   position: relative;
 }
 
-h2 {
-  padding-bottom: 20px;
-  font-size: 1.7rem; /* Increased font size for zoom effect */
-}
-
 .content-container {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px; /* Increased padding for zoom effect */
+  padding: 0 20px;
 }
 
 .game-image1,
 .game-image2,
 .game-image3 {
-  width: 70px; /* Adjusted size to fit screen better */
+  width: 70px;
   height: 70px;
   background-position: center;
   background-size: cover;
@@ -102,7 +97,7 @@ h2 {
 }
 
 .game-name {
-  font-size: 1.5rem; /* Increased font size for zoom effect */
+  font-size: 1.5rem;
   color: var(--secondary-colour);
   flex: 1;
   text-align: left;
@@ -110,17 +105,17 @@ h2 {
 }
 
 .rating {
-  font-size: 2rem; /* Increased font size for zoom effect */
+  font-size: 2rem;
   text-align: right;
   position: absolute;
   right: 20px;
-  opacity: 0; /* Hidden by default */
+  opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .card:hover .rating,
 .card:focus .rating {
-  opacity: 1; /* Show when hovered or focused */
+  opacity: 1;
 }
 
 .list-container:hover .card {
@@ -135,7 +130,6 @@ h2 {
   border-color: var(--star-colour);
 }
 
-/* Responsive design for mobile */
 @media (max-width: 600px) {
   .container {
     padding: 20px;
@@ -143,11 +137,7 @@ h2 {
   }
 
   .card {
-    height: 110px; /* Adjusted height for mobile fit */
-  }
-
-  h2 {
-    font-size: 1.9rem;
+    height: 110px;
   }
 
   .game-name {
